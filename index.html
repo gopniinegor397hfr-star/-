@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080615">
+  <title>Наша история 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="nebula" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- ГЛАВА 1 -->
+  <main id="loading" class="loading scene" aria-hidden="false">
+    <div class="intro-copy">
+      <p id="lineOne" class="story-line line-one"></p>
+      <p id="lineTwo" class="story-line line-two"></p>
+    </div>
+
+    <div id="fragment" class="fragment">
+      <div class="fragment-glow"></div>
+      <svg class="fragment-shape" viewBox="0 0 320 360" aria-hidden="true">
+        <defs>
+          <linearGradient id="crystal" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff5ff"/>
+            <stop offset="35%" stop-color="#e8b7ff"/>
+            <stop offset="70%" stop-color="#b77aff"/>
+            <stop offset="100%" stop-color="#ff9ecf"/>
+          </linearGradient>
+        </defs>
+        <path d="M160 12 L250 67 L299 174 L237 292 L160 344 L78 292 L20 174 L69 67 Z"
+          fill="url(#crystal)" fill-opacity=".2"
+          stroke="url(#crystal)" stroke-width="2.5"/>
+        <path d="M160 12 L177 143 L250 67 Z" fill="#fff0ff" fill-opacity=".48"/>
+        <path d="M160 12 L69 67 L143 145 Z" fill="#f7d8ff" fill-opacity=".3"/>
+        <path d="M69 67 L20 174 L143 145 Z" fill="#b67bff" fill-opacity=".36"/>
+        <path d="M250 67 L299 174 L177 143 Z" fill="#ffc5ed" fill-opacity=".3"/>
+        <path d="M143 145 L177 143 L160 344 Z" fill="#d5a4ff" fill-opacity=".65"/>
+        <path d="M20 174 L143 145 L78 292 Z" fill="#a56bff" fill-opacity=".34"/>
+        <path d="M299 174 L177 143 L237 292 Z" fill="#ffb0e2" fill-opacity=".34"/>
+        <path d="M78 292 L143 145 L160 344 Z" fill="#e8b4ff" fill-opacity=".45"/>
+        <path d="M237 292 L177 143 L160 344 Z" fill="#c88bff" fill-opacity=".35"/>
+      </svg>
+
+      <div class="fragment-content">
+        <span class="fragment-number">✦ ГЛАВА ПЕРВАЯ ✦</span>
+        <h1>1 часть<br>нашей истории!</h1>
+        <span class="fragment-heart">♡</span>
+      </div>
+      <div class="fragment-spark spark-a">✧</div>
+      <div class="fragment-spark spark-b">✦</div>
+      <div class="fragment-spark spark-c">✧</div>
+    </div>
+
+    <div id="loadingStatus" class="loading-status">
+      <span class="status-dot"></span>
+      СОБИРАЕМ НАШУ ИСТОРИЮ
+    </div>
+  </main>
+
+  <!-- ГЛАВА 2: ПОИСК ФРАГМЕНТА -->
+  <main id="chapterTwo" class="chapter-two scene" aria-hidden="true">
+    <div class="chapter-heading">
+      <div class="chapter-kicker">✦ НАША ИСТОРИЯ ✦</div>
+      <h2 id="chapterTitle" class="assembled-title"></h2>
+      <p id="chapterSubtitle" class="assembled-subtitle"></p>
+      <div class="heading-ornament"><span></span> ✧ <span></span></div>
+      <div id="tapHint" class="tap-hint">ЖМИ!</div>
+    </div>
+
+    <div id="tapCounter" class="tap-counter">Звёзды: <span>0</span> / 50</div>
+    <div id="effectsLayer" class="effects-layer"></div>
+
+    <div id="secondFragment" class="second-fragment">
+      <div class="second-fragment-glow"></div>
+      <svg class="second-crystal" viewBox="0 0 320 360" aria-hidden="true">
+        <defs>
+          <linearGradient id="crystalTwo" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff9ff"/>
+            <stop offset="40%" stop-color="#ffc8f0"/>
+            <stop offset="72%" stop-color="#b78bff"/>
+            <stop offset="100%" stop-color="#ffacd9"/>
+          </linearGradient>
+        </defs>
+        <path d="M160 12 L250 67 L299 174 L237 292 L160 344 L78 292 L20 174 L69 67 Z"
+          fill="url(#crystalTwo)" fill-opacity=".23"
+          stroke="url(#crystalTwo)" stroke-width="2.5"/>
+        <path d="M160 12 L177 143 L250 67 Z" fill="#fff" fill-opacity=".48"/>
+        <path d="M160 12 L69 67 L143 145 Z" fill="#ffd9fa" fill-opacity=".42"/>
+        <path d="M69 67 L20 174 L143 145 Z" fill="#bd8cff" fill-opacity=".45"/>
+        <path d="M250 67 L299 174 L177 143 Z" fill="#ffc5ec" fill-opacity=".4"/>
+        <path d="M143 145 L177 143 L160 344 Z" fill="#d7a5ff" fill-opacity=".7"/>
+        <path d="M20 174 L143 145 L78 292 Z" fill="#9e6cf0" fill-opacity=".4"/>
+        <path d="M299 174 L177 143 L237 292 Z" fill="#ffacd9" fill-opacity=".4"/>
+      </svg>
+
+      <div class="second-fragment-content">
+        <span>✦ ВТОРАЯ ГЛАВА ✦</span>
+        <h2>Ты нашла<br>вторую часть<br>нашей истории 💕</h2>
+        <div class="fragment-heart">♡</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ГЛАВА 3: КАРТА ДВУХ ПУТЕЙ -->
+  <main id="chapterThree" class="chapter-three scene" aria-hidden="true">
+    <header class="map-heading">
+      <span class="map-kicker">НАША ВСЕЛЕННАЯ</span>
+      <h2>Дорога, по которой ты можешь найти 3 часть нашей истории...</h2>
+      <p>Каждый путь хранит свой секрет 💗</p>
+    </header>
+
+    <div class="path-map" aria-label="Два пути">
+      <svg class="path-curve" viewBox="0 0 320 300"
+        preserveAspectRatio="none" aria-hidden="true">
+        <path class="path-curve-base" d="M82 45 C265 68 265 220 220 255"/>
+        <path class="path-curve-glow" d="M82 45 C265 68 265 220 220 255"/>
+      </svg>
+
+      <button id="pathOne" class="path-node path-open" type="button">
+        <span class="path-orb">01</span>
+        <span class="path-copy">
+          <span class="path-name">Первый путь</span>
+          <span class="path-state">ОТКРЫТ ✧</span>
+        </span>
+      </button>
+
+      <button id="pathTwo" class="path-node path-locked" type="button" disabled>
+        <span class="path-orb">02</span>
+        <span class="path-copy">
+          <span class="path-name">Тайна колдуна</span>
+          <span class="path-state">ЗАКРЫТО 🔒</span>
+        </span>
+      </button>
+    </div>
+  </main>
+
+  <!-- ВОПРОСЫ -->
+  <main id="quizScreen" class="quiz-screen scene" aria-hidden="true">
+    <div class="quiz-card">
+      <span class="quiz-kicker">ПЕРВЫЙ ПУТЬ · ПРОВЕРКА</span>
+      <h2 class="quiz-intro">И так, чтобы пройти путь дальше, ответь на пару вопросов. Вухахаха!</h2>
+      <div class="quiz-progress"><span id="quizProgress"></span></div>
+      <span id="questionNumber" class="question-number">ВОПРОС 1</span>
+      <h3 id="questionText" class="question-text"></h3>
+      <div id="answerList" class="answer-list"></div>
+      <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <!-- ИГРА С КОЛДУНОМ -->
+  <main id="wizardScreen" class="wizard-screen scene" aria-hidden="true">
+    <header class="wizard-heading">
+      <div class="wizard-character">
+        <div class="wizard-aura"></div>
+        <div class="wizard-emoji">🧙‍♂️</div>
+      </div>
+      <div class="wizard-speech">
+        <span class="wizard-label">ЗЛОВЕЩИЙ КОЛДУН</span>
+        <p id="wizardIntro" aria-live="polite"></p>
+      </div>
+    </header>
+
+    <div class="match-instructions">
+      Соедини каждую карточку слева с правильным ответом справа
+    </div>
+
+    <div class="match-board">
+      <div id="questionColumn" class="match-column">
+        <span class="column-title">ВОПРОСЫ</span>
+      </div>
+      <div id="answerColumn" class="match-column">
+        <span class="column-title">ОТВЕТЫ</span>
+      </div>
+    </div>
+
+    <div id="matchFeedback" class="match-feedback" aria-live="polite">
+      Выбери вопрос, а затем ответ
+    </div>
+    <div id="matchProgress" class="match-progress">Найдено пар: 0 / 6</div>
+  </main>
+
+  <!-- ФРАГМЕНТ 3 -->
+  <main id="thirdFragmentScreen" class="third-fragment-screen scene" aria-hidden="true">
+    <div id="wizardBurst" class="wizard-burst"></div>
+    <div class="third-crystal">
+      <div class="third-crystal-glow"></div>
+      <svg viewBox="0 0 320 360" aria-hidden="true">
+        <defs>
+          <linearGradient id="crystalThree" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff"/>
+            <stop offset="40%" stop-color="#ffc6ef"/>
+            <stop offset="75%" stop-color="#bd91ff"/>
+            <stop offset="100%" stop-color="#ff9fd5"/>
+          </linearGradient>
+        </defs>
+        <path d="M160 12 L250 67 L299 174 L237 292 L160 344 L78 292 L20 174 L69 67 Z"
+          fill="url(#crystalThree)" fill-opacity=".24"
+          stroke="url(#crystalThree)" stroke-width="2.5"/>
+        <path d="M160 12 L177 143 L250 67 Z" fill="#fff" fill-opacity=".5"/>
+        <path d="M160 12 L69 67 L143 145 Z" fill="#ffd9fa" fill-opacity=".42"/>
+        <path d="M69 67 L20 174 L143 145 Z" fill="#bd8cff" fill-opacity=".45"/>
+        <path d="M250 67 L299 174 L177 143 Z" fill="#ffc5ec" fill-opacity=".4"/>
+        <path d="M143 145 L177 143 L160 344 Z" fill="#d7a5ff" fill-opacity=".7"/>
+      </svg>
+      <div class="third-crystal-text">
+        <span>✦ ТРЕТЬЯ ГЛАВА ✦</span>
+        <h2>Ты нашла<br>третью часть<br>нашей истории 💗</h2>
+        <span class="fragment-heart">♡</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- ФИНАЛЬНАЯ ГЛАВА -->
+  <main id="chapterFour" class="chapter-four scene" aria-hidden="true">
+    <div id="fourIntro" class="four-intro">
+      И так моя любимая это последний наш фрагмент ты умничка нашла все и спасла вселенную! ❤️‍🩹
+    </div>
+
+    <div id="heartStage" class="heart-stage" aria-hidden="true">
+      <div id="heartParticles" class="heart-particles"></div>
+      <div id="finalHeart" class="final-heart">♥</div>
+    </div>
+
+    <section id="finalMessage" class="final-message" aria-live="polite">
+      <p>Любимая моя ти Женечка поддержать тебя готов и послушать и обнять а ещё поцеловать 💋</p>
+      <p>Очень сильно знай люблю тебя ❤️💘</p>
+      <p>Вот тибе я сделал это</p>
+      <p>Я тебя люблю так сильно</p>
+      <p>Научусь и сделаю я сильно 💪</p>
+      <p>Ти прости меня позязя</p>
+      <p>Женечка моя любимая ти мое солнышко и счастье 💗💖</p>
+    </section>
+
+    <div id="finalFooter" class="final-footer">Продолжение сделаем сами?) 🥰</div>
+  </main>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
